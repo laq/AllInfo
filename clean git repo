@@ -1,5 +1,7 @@
 http://stevelorek.com/how-to-shrink-a-git-repository.html
 
+List biggest files git rev-list --objects --all | grep "$(git verify-pack -v .git/objects/pack/*.idx | sort -k 3 -n | tail -10 | awk '{print$1}')"
+
 Steve Lorek
 
 Ruby and Rails Developer from Southampton, UK—Senior Developer at LoveThis.
