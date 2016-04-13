@@ -1,0 +1,4 @@
+Linux - Kubuntu
+
+GTK problem with KDE, Oxigen error  "Oxygen::ComboBoxData::setButton(GtkWidget*): Assertion `!_button._widget' failed":
+  Use "qtcurve" as gtk engine  "gtk2-engines-qtcurve"
