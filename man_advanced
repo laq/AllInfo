@@ -1,0 +1,38 @@
+Linux man, 
+"Man man" explains how man shows the manual for many things, not only programs, but also system calls, and many others, grouped in secctions
+The section number is shown in the upper part of the page
+
+ls(1)
+
+this numbers correspond to: 
+      1   Executable programs or shell commands
+       2   System calls (functions provided by the kernel)
+       3   Library calls (functions within program libraries)
+       4   Special files (usually found in /dev)
+       5   File formats and conventions eg /etc/passwd
+       6   Games
+       7   Miscellaneous (including macro packages and conventions), e.g. man(7), groff(7)
+       8   System administration commands (usually only for root)
+       9   Kernel routines [Non standard]
+
+And by default man <page> shows the first page following the default section order "1 n l 8 3 2 3posix 3pm 3perl 5 4 9 6 7
+
+To view a specific section:
+"man 1 ls"
+
+To view all sections under a name:
+"whatis write" returns:
+          write (1)            - send a message to another user
+          write (2)            - write to a file descriptor
+or approppos/ man -k do a regex search in names and descriptions
+"apropos '^write' " returns:
+          ...
+          wall (1)             - write a message to users
+          wodim (1)            - write data to optical disk media
+          write (1)            - send a message to another user
+          write (2)            - write to a file descriptor
+          writev (2)           - read or write data into multiple buffers
+          XvPutStill (3)       - write a single frame of video to a drawable
+          ...
+
+
