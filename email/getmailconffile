@@ -1,0 +1,35 @@
+# define the settings used to connect to your mailbox
+[retriever]
+type = SimpleIMAPSSLRetriever
+server = imap.gmail.com
+username = <email@email.com>
+password = <password>
+mailboxes = ("POO2016/T6",)  # this is the special Gmail label that signifies all messages when accessed through an IMAP client. If you only want to backup some labels, include them here.
+port = 993
+
+# main testination declaration.
+[destination]
+# specify that we want to back up to more than one place
+type = MultiDestination
+# and select the destinations
+destinations = ('[maildir-destination]',)
+
+# mbox destination settings
+#[mboxrd-destination]
+#type = Mboxrd
+#path = /mnt/mir/Backup/GmailBackup/backup.mbox
+
+# maildir destination settings
+[maildir-destination]
+type = Maildir
+path = /home/user/mailtest/
+
+[options]
+# prevent verbose command line output
+verbose = 0
+# do not re read messages that have already been downloaded (only download new messages)
+read_all = false
+# prevent getmail from adding a received header to the message as it is saved
+received = false
+# prevent getmail from adding a delivered_to header to the message as it is saved
+delivered_to = false
