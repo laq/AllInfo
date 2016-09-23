@@ -1,4 +1,6 @@
-Get mail is useful for downloading 
+Get mail is useful for downloading all emails from a label.
+
+Downloaded emails are stored in .getmail folder, erasing the file would allow it to download emails again.
 
 http://www.makethenmakeinstall.com/2013/02/script-gmail-backup-with-getmail-on-linux/
 needs: 
