@@ -1,0 +1,2 @@
+ alias gittree="git log --graph --pretty=format:'%C(yellow)%h%Creset %C(auto)%d% %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'"
+alias gittree2='git log --oneline --graph --color --all --decorate'
