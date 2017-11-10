@@ -1,0 +1,14 @@
+Improving diff usage:
+
+  diff -y
+shows side by side
+
+  colordiff 
+Colorizes input
+
+  less -R
+Shows color from pipe
+
+So:
+colordiff -y a b | less -SR
+would show diffs in a useful graphic way :).
