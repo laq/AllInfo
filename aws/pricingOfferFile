@@ -1,0 +1,4 @@
+
+curl https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/index.json
+curl https://pricing.us-east-1.amazonaws.com/offers/v1.0/aws/AmazonEC2/current/index.csv > index.csv
+cat index.csv | grep Linux | cat <(head -n6 index.csv | tail -n1) - | sed 's/,,/,"",/g;s/,,/,"",/g' | sed 's/","/@/g '| column -s@ -t |  less -SiN
