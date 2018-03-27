@@ -1,0 +1,10 @@
+#!/bin/bash
+if [[ "$#" -ne 2 ]];then
+	echo "Not right number of arguments: <awsprofile> <*InstanceName*>"
+	exit 1
+fi
+
+NAME=$2
+PROFILE=$1
+
+aws --profile $PROFILE ec2 describe-instances --filters "Name=tag:Name,Values=*${NAME}*" --query 'Reservations[].Instances[].[Tags[?Key==`Name`]|[0].Value,PrivateIpAddress, InstanceId, PublicIpAddress, Placement.AvailabilityZone, SubnetId, InstanceType, KeyName]'  --output text | column -t
