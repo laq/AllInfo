@@ -1,2 +1,2 @@
-apt install tree net-tools fish terminator docker.io vim fzf git-gui
+apt install tree net-tools fish terminator docker.io vim fzf git-gui pavucontrol
 # install trilium
