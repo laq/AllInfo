@@ -1,0 +1,1 @@
+docker run -d -p 0.0.0.0:8080:8080 -v <NOTES_FOLDER>:/home/node/trilium-data zadam/trilium:0.60.4
