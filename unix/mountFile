@@ -1,0 +1,15 @@
+In linux we can create a file, format it and use it as a device, so we can mount it witn any file system.
+
+Main guide from:
+https://wiki.archlinux.org/title/sparse_file
+
+
+```
+truncate -s 20G mydevice
+# to check
+du -h --apparent-size mydevice
+du -h mydevice
+mkfs.ext4 mydevice
+mkdir mountpoint
+sudo mount -o loop mydevice mountpoint/
+```
