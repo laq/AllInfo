@@ -2,3 +2,11 @@ From git 2.3.0 on
 GIT_SSH_COMMAND="ssh -i ~/.ssh/id_rsa_example" 
 
 from: https://superuser.com/questions/232373/how-to-tell-git-which-private-key-to-use
+
+
+# Or
+git config --add --local core.sshCommand 'ssh -i <PATH_TO_SSH_KEY>'
+# from: https://stackoverflow.com/questions/7927750/specify-an-ssh-key-for-git-push-for-a-given-domain
+
+
+
