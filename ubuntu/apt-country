@@ -1,0 +1,5 @@
+# Change country for apt on kubuntu
+
+https://askubuntu.com/questions/1526583/kubuntu-24-04-how-can-i-change-the-server-for-downloading-update
+
+For Kubuntu I find setting by going into system settings, hardware, driver manager, And then Ubuntu Software and combo box to choose location.
